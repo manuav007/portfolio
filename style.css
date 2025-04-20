@@ -1,0 +1,168 @@
+/* Body and Base Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+  
+  /* 🧑‍💻 Intro Section */
+  #intro {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #6a1b9a, #36005c);
+    color: white;
+    position: relative;
+  }
+  
+  .intro-content {
+    z-index: 2;
+  }
+  
+  #intro h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #fff3e0;
+  }
+  
+  .intro-description {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .links {
+    margin-top: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #4b0082;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #36005c;
+  }
+  
+  .skills {
+    margin-top: 40px;
+  }
+  
+  .skills h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .skills-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .skill-icon {
+    font-size: 1.1rem;
+    background-color: #0b0202;
+    padding: 8px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(241, 238, 238, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    background-color: #4b0082;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #36005c;
+  }
+  
+  /* 🚀 Projects Section */
+  .section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  
+  #projects {
+    padding: 60px 30px;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .thumbnail {
+    height: 180px;
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 0 10px;
+  }
+  
+  .project-card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .btn {
+    background-color: #4b0082
+  }
