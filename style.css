@@ -1,168 +1,234 @@
-/* Body and Base Styles */
+:root {
+  --github-dark: #0d1117;
+  --github-dark-2: #161b22;
+  --github-border: #30363d;
+  --github-text: #c9d1d9;
+  --github-blue: #58a6ff;
+  --github-green: #3fb950;
+  --github-purple: #bc8cff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--github-dark);
+  color: var(--github-text);
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+/* Left Sidebar - Profile Info */
+.profile-sidebar {
+  width: 296px;
+  flex-shrink: 0;
+}
+
+.profile-card {
+  background-color: var(--github-dark-2);
+  border: 1px solid var(--github-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile-avatar {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.profile-username {
+  color: #8b949e;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.profile-bio {
+  margin-bottom: 1rem;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.profile-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.profile-links {
+  margin-top: 1rem;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--github-text);
+  text-decoration: none;
+}
+
+.profile-link:hover {
+  color: var(--github-blue);
+}
+
+.skills-section {
+  background-color: var(--github-dark-2);
+  border: 1px solid var(--github-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skills-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  background-color: rgba(56, 139, 253, 0.15);
+  color: var(--github-blue);
+  padding: 0.25rem 0.5rem;
+  border-radius: 2em;
+  font-size: 0.75rem;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+/* Main Content - Projects */
+.main-content {
+  flex-grow: 1;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: var(--github-dark-2);
+  border: 1px solid var(--github-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.project-card:hover {
+  border-color: #58a6ff;
+}
+
+.project-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--github-blue);
+}
+
+.project-description {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  color: #8b949e;
+  min-height: 3.5em;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 120px;
+  background-color: #0d1117;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border: 1px solid var(--github-border);
+}
+
+.project-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #238636;
+  color: white;
+  border: 1px solid rgba(240, 246, 252, 0.1);
+}
+
+.btn-primary:hover {
+  background-color: #2ea043;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--github-blue);
+  border: 1px solid var(--github-border);
+}
+
+.btn-outline:hover {
+  background-color: rgba(56, 139, 253, 0.1);
+  border-color: #58a6ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
-  
-  /* 🧑‍💻 Intro Section */
-  #intro {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #6a1b9a, #36005c);
-    color: white;
-    position: relative;
+
+  .profile-sidebar {
+    width: 100%;
   }
-  
-  .intro-content {
-    z-index: 2;
+
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
-  
-  #intro h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .highlight {
-    color: #fff3e0;
-  }
-  
-  .intro-description {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    margin: 20px auto;
-    max-width: 800px;
-  }
-  
-  .links {
-    margin-top: 30px;
-  }
-  
-  .btn {
-    display: inline-block;
-    background-color: #4b0082;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    margin: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #36005c;
-  }
-  
-  .skills {
-    margin-top: 40px;
-  }
-  
-  .skills h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .skills-icons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .skill-icon {
-    font-size: 1.1rem;
-    background-color: #0b0202;
-    padding: 8px 20px;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(241, 238, 238, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .skill-icon:hover {
-    transform: scale(1.1);
-  }
-  
-  .cta-btn {
-    display: inline-block;
-    background-color: #4b0082;
-    color: #fff;
-    padding: 14px 28px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-top: 40px;
-    transition: background 0.3s ease;
-  }
-  
-  .cta-btn:hover {
-    background-color: #36005c;
-  }
-  
-  /* 🚀 Projects Section */
-  .section-title {
-    text-align: center;
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 50px;
-  }
-  
-  #projects {
-    padding: 60px 30px;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-  }
-  
-  .project-card {
-    background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.2s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-8px);
-  }
-  
-  .thumbnail {
-    height: 180px;
-    background-color: #ececec;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: #888;
-    margin-bottom: 20px;
-  }
-  
-  .project-card h3 {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin: 0 0 10px;
-  }
-  
-  .project-card p {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .btn {
-    background-color: #4b0082
-  }
+}
